@@ -1,0 +1,25 @@
+{
+  "name": "update-changelog",
+  "version": "0.0.1",
+  "description": "GitHub App which prompts users to update the CHANGELOG.md file when they submit a pull request.",
+  "author": "Justin Edelson <justin@justinedelson.com>",
+  "license": "Apache 2.0",
+  "repository": "https://github.com/justinedelson/update-changelog.git",
+  "scripts": {
+    "start": "probot run ./index.js",
+    "test": "mocha && standard"
+  },
+  "dependencies": {
+    "probot": "^2.0.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "localtunnel": "^1.8.2",
+    "mocha": "^3.2.0",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 7.7.0",
+    "npm": ">= 4.0.0"
+  }
+}
