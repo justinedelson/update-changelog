@@ -25,7 +25,7 @@ describe('update-changelog', () => {
       repos: {
         getContent: expect.createSpy().andReturn(Promise.resolve({
           data: {
-            content: Buffer.from('whiteList:\n - chore').toString('base64')
+            content: Buffer.from('updateChangelogWhiteList:\n - chore').toString('base64')
           }
         }))
       },
@@ -74,7 +74,7 @@ describe('update-changelog', () => {
         repo: 'testing-things',
         path: '.github/config.yml'
       })
-      expect(github.issues.createComment).toHaveBeenCalled()
+      expect(github.issues.createComment).toNotHaveBeenCalled()
     })
   })
 

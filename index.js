@@ -13,8 +13,8 @@ module.exports = (robot) => {
         const config = await context.config('config.yml')
         const title = context.payload.pull_request.title
         let whiteList
-        if (config.updateDocsWhiteList) {
-          whiteList = config.updateDocsWhiteList.find(function (item) {
+        if (config.updateChangelogWhiteList) {
+          whiteList = config.updateChangelogWhiteList.find(function (item) {
             if (title.toLowerCase().includes(item.toLowerCase())) {
               return item
             }
@@ -22,7 +22,7 @@ module.exports = (robot) => {
         }
         // Check to make sure it's not whitelisted (ie bug or chore)
         if (!whiteList) {
-          const template = config.updateDocsComment
+          const template = config.updateChangelogComment
           return context.github.issues.createComment(context.issue({body: template}))
         }
       } catch (err) {
