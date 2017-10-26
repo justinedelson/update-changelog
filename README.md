@@ -11,7 +11,7 @@ based on https://github.com/behaviorbot/update-docs.
 2. Add a `.github/config.yml` file that contains the contents you would like to reply within an `updateChangelogComment`
 3. Optionally, you can also add a `updateChangelogWhiteList` that includes terms, that if found in the title, the bot will not comment on.
 ```yml
-# Configuration for update-docs - https://github.com/behaviorbot/update-docs
+# Configuration for update-changelog - https://github.com/justinedelson/update-changelog
 
 # Comment to be posted to on PRs that don't update documentation
 updateChangelogComment: >
